@@ -3,19 +3,141 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --background: #ffffff;
+    --foreground: #171717;
+    --sub: #344054;
+    --soft: #667185;
+    --accent: #09090b;
+    --accent-foreground: #ffffff;
+    --primary: #a02be4;
+    --primary-foreground: #ffffff;
+    --secondary: #4f46e5;
+    --secondary-foreground: #ffffff;
+    --tertiary: var(--background);
+    --tertiary-foreground: var(--foreground);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+    color: var(--foreground);
+    font-family: var(--font-inter), Arial, Helvetica, sans-serif;
+    background: radial-gradient(
+            3093.38% 117.19% at 52.58% 7.83%,
+            rgba(212, 199, 255, 0.2) 40%,
+            rgba(253, 254, 255, 0.2) 80.56%,
+            rgba(255, 255, 255, 0.2) 100%
+        ),
+        rgba(212, 199, 255, 0.2);
+    /* background-size: auto, auto; */
+    position: relative;
+    /* isolation: isolate; */
+}
+body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("/bg-dot.webp");
+    background-repeat: repeat;
+    background-size: 20px 20px;
+    opacity: 0.03;
+    z-index: -1;
+}
+
+.primary-button {
+    background: linear-gradient(
+            135deg,
+            var(--primary) 0%,
+            rgba(0, 0, 0, 0) 50%,
+            var(--secondary) 100%
+        ),
+        var(--accent);
+    color: var(--primary-foreground);
+    box-shadow: 0px 35px 16px 0px rgba(0, 0, 0, 0.01);
+    box-shadow: 0px 2px 5px 0px rgba(0, 0, 0, 0.08);
+}
+
+.badge-border-gradient {
+    position: relative;
+    background-clip: padding-box;
+}
+
+.badge-border-gradient::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    z-index: -1;
+    border-radius: 999px;
+    background: linear-gradient(
+        180deg,
+        #6c50e0 0%,
+        rgba(169, 71, 134, 0.7) 51%,
+        rgba(228, 63, 48, 0.8) 100%
+    );
+}
+
+.text-gradient {
+    color: transparent;
+    background: linear-gradient(
+        180deg,
+        #6c50e0 0%,
+        rgba(169, 71, 134, 0.7) 51%,
+        rgba(228, 63, 48, 0.8) 100%
+    );
+    background-clip: text;
+}
+
+.hero-overlay {
+    background: linear-gradient(
+        180deg,
+        rgba(248, 249, 251, 0) 0%,
+        #f8f9fb 5.75%
+    );
+}
+
+.section-icon {
+    background: linear-gradient(
+        141.66deg,
+        #1a21bf 12.68%,
+        rgba(169, 116, 255, 0.2) 58.38%,
+        rgba(169, 116, 255, 0.3) 87.72%
+    );
+    color: var(--primary-foreground);
+    box-shadow: 0px 2.73px 4.09px 0px rgba(0, 0, 0, 0.08);
+}
+
+.designer-card {
+    box-shadow:
+        0px 7.32px 7.32px -3.66px #0000000a,
+        0px 18.31px 21.97px -3.66px #0000001a;
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.clipped {
+    clip-path: inset(0 0 -10% 0);
+}
+
+.benefit-card {
+    border: 0.67px solid rgba(240, 240, 240, 1);
+    box-shadow: 0px -2.44px 17.15px -6.67px rgba(226, 227, 242, 1) inset;
+    background: rgba(252, 252, 253, 1);
+}
+.benefit-card-text-container {
+    background: linear-gradient(
+        179.25deg,
+        rgba(252, 252, 253, 0) 11.93%,
+        rgba(252, 252, 253, 0.8) 42.22%
+    );
 }
