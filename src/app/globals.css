@@ -24,16 +24,22 @@
   }
 } */
 
+/* *,
+*::after,
+*::before {
+    outline: 1px solid red;
+} */
+
 body {
     color: var(--foreground);
     font-family: var(--font-inter), Arial, Helvetica, sans-serif;
     background: radial-gradient(
-            3093.38% 117.19% at 52.58% 7.83%,
-            rgba(212, 199, 255, 0.2) 40%,
-            rgba(253, 254, 255, 0.2) 80.56%,
-            rgba(255, 255, 255, 0.2) 100%
-        ),
-        rgba(212, 199, 255, 0.2);
+        3093.38% 117.19% at 52.58% 7.83%,
+        rgba(212, 199, 255, 0.2) 40%,
+        rgba(253, 254, 255, 0.2) 80.56%,
+        rgba(255, 255, 255, 0.2) 100%
+    );
+    /* rgba(212, 199, 255, 0.2); */
     /* background-size: auto, auto; */
     position: relative;
     /* isolation: isolate; */
@@ -224,8 +230,7 @@ details[open]::details-content {
         0px -2px 6px 0px #0000001a inset;
 }
 
-/* *,
-*::after,
-*::before {
-    outline: 1px solid red;
-} */
+.testimonial-card {
+    border: 0.67px solid #f0f0f0;
+    box-shadow: 0px -10.44px 17.15px -6.67px rgba(226, 227, 242, 0.5) inset;
+}

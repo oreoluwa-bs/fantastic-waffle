@@ -2,6 +2,7 @@ import { StarsIcon } from "~/components/icons/stars";
 import { UsersIcon } from "~/components/icons/users";
 import { Badge } from "~/components/ui/badge";
 import { SectionIcon } from "~/components/ui/section-icon";
+import { TestimonialCarousel } from "./tesimonial-carousel";
 
 export function Testimonials() {
   return (
@@ -27,7 +28,9 @@ export function Testimonials() {
           </div>
         </div>
       </div>
-      <div className="container mx-auto mt-14"></div>
+      <div className="max-w-screen-2xl mx-auto mt-14">
+        <TestimonialCarousel />
+      </div>
     </section>
   );
 }
