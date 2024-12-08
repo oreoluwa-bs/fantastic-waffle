@@ -43,7 +43,7 @@ const designers = [
     },
   },
   {
-    headshot: "/designers/juwon-Olagoke.webp",
+    headshot: "/designers/juwon-olagoke.webp",
     name: "Juwon Olagoke",
     alias: "@@snazzdesign",
     meta: {

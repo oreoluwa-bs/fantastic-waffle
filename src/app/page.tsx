@@ -9,10 +9,11 @@ import { Hero } from "./components/hero";
 import { Pricing } from "./components/pricing";
 import { SocialProof } from "./components/social-proof";
 import { Testimonials } from "./components/tesimonials";
+import { Experience } from "./experience";
 
 export default function Home() {
   return (
-    <>
+    <Experience>
       <Button variant="tertiary" className="fixed top-4 right-4 z-30">
         <DsgnWhizIcon />
         Join DsgnWhiz
@@ -46,6 +47,6 @@ export default function Home() {
       <div className="pt-20">
         <Footer />
       </div>
-    </>
+    </Experience>
   );
 }
