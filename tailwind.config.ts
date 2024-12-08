@@ -33,6 +33,9 @@ export default {
           DEFAULT: "var(--tertiary)",
           foreground: "var(--tertiary-foreground)",
         },
+        weak: {
+          foreground: "var(--weak)",
+        },
       },
     },
   },

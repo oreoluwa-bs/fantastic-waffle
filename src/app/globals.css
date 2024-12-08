@@ -15,6 +15,7 @@
     --secondary-foreground: #ffffff;
     --tertiary: var(--background);
     --tertiary-foreground: var(--foreground);
+    --weak: #98a2b3;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -233,4 +234,64 @@ details[open]::details-content {
 .testimonial-card {
     border: 0.67px solid #f0f0f0;
     box-shadow: 0px -10.44px 17.15px -6.67px rgba(226, 227, 242, 0.5) inset;
+}
+
+.tab-trigger {
+    position: relative;
+}
+.tab-trigger::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    z-index: -1;
+    border-radius: 999px;
+    background: transparent;
+    transition: all 0.3ms ease-out;
+}
+.tab-trigger[data-state="active"]::before {
+    background: linear-gradient(
+        180deg,
+        #8c1380 -22.77%,
+        #f15bd0 -5.16%,
+        rgba(255, 255, 255, 0) 130.94%
+    );
+}
+
+.pricing-card {
+    box-shadow:
+        0px 1.25px 2.49px 0px #e4e5e73d,
+        0px 12px 24px -12px #c9d7e480;
+}
+
+.pricing-card__container {
+    position: relative;
+    background: #e7f6ec;
+}
+.pricing-card__container[data-state="active"] {
+    background: transparent;
+}
+
+.pricing-card__container::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    z-index: -1;
+    border-radius: 16px;
+    background: linear-gradient(
+        180deg,
+        #036b26 -22.77%,
+        #06e451 -5.16%,
+        rgba(255, 255, 255, 0) 130.94%
+    );
+    transition: all 0.3ms ease-out;
+}
+.pricing-card__container[data-state="active"]::before {
+    background: #f0f2f5;
+}
+.pricing-card-upgrade-button {
+    box-shadow:
+        0px 1.25px 3.74px 0px #0000001a,
+        0px -1.25px 0px 0px #066526 inset,
+        0px 1.25px 0.93px 0px #ffffff1f inset,
+        0px 0px 0px 1.25px #088231;
 }
