@@ -55,6 +55,14 @@ body::before {
     opacity: 0.03;
     z-index: -1;
 }
+.footer-end{
+    background: radial-gradient(
+        3093.38% 117.19% at 52.58% 7.83%,
+        rgba(212, 199, 255, 0.2) 40%,
+        rgba(253, 254, 255, 0.2) 80.56%,
+        rgba(255, 255, 255, 0.2) 100%
+    );
+}
 
 .primary-button {
     background: linear-gradient(

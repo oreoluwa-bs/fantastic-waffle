@@ -22,7 +22,15 @@ export function Experience({ children }: { children: React.ReactNode }) {
     <ReactLenis
       root
       ref={lenisRef}
-      options={{ lerp: 0.1, duration: 1.5, smoothWheel: true, autoRaf: false }}
+      options={{
+        lerp: 0.1,
+        duration: 1,
+        smoothWheel: true,
+        autoRaf: false,
+        infinite: true,
+        syncTouch: true,
+
+      }}
     >
       {children}
     </ReactLenis>

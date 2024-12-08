@@ -5,6 +5,7 @@ import { Button } from "~/components/ui/button";
 import { Benefits } from "./components/benefits";
 import { FAQs } from "./components/faqs";
 import { Features } from "./components/features";
+import { FooterEnd } from "./components/footer-end";
 import { Hero } from "./components/hero";
 import { Pricing } from "./components/pricing";
 import { SocialProof } from "./components/social-proof";
@@ -47,6 +48,7 @@ export default function Home() {
       <div className="pt-20">
         <Footer />
       </div>
+      <FooterEnd />
     </Experience>
   );
 }
