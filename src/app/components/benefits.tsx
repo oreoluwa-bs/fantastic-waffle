@@ -82,7 +82,7 @@ export function Benefits() {
           })}
         </ul>
       </div>
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center pb-20">
         <Button className="w-[164px]">
           <RocketIcon />
           Subscribe now
