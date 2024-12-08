@@ -295,3 +295,8 @@ details[open]::details-content {
         0px 1.25px 0.93px 0px #ffffff1f inset,
         0px 0px 0px 1.25px #088231;
 }
+
+.feature-card {
+    border: 0.67px solid #f0f0f0;
+    box-shadow: 0px -10.44px 17.15px -6.67px #e2e3f2 inset;
+}

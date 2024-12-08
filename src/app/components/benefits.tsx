@@ -97,7 +97,7 @@ function BenefitCard({ benefit }: { benefit: (typeof benefits)[0] }) {
     <div className="benefit-card rounded-[30px] overflow-hidden h-full">
       <div className="bg-gray-50 h-56"></div>
       <div className="benefit-card-text-container px-9 py-9">
-        <h3 className="text-[#0E0523] -tracking-tight text-xl mb-6">
+        <h3 className="text-[#0E0523]  tracking-tight text-xl mb-6">
           {benefit.title}
         </h3>
         <p className="text-[#33274B] tracking-[-0.01em] leading-5">

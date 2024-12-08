@@ -184,6 +184,7 @@ function TestimonialCard({
           width={333}
           height={221}
           loading="lazy"
+          className="w-full"
         />
       </div>
       <div className="p-4">
