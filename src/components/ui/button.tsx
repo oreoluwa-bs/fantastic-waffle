@@ -51,6 +51,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
             height={62}
             className="w-[3.9rem] h-[3.9rem]"
             loading="lazy"
+            unoptimized
           />
           <Image
             src="/twinkles.webp"
@@ -59,6 +60,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
             height={62}
             className="w-[3.9rem] h-[3.9rem] rotate-[90deg]"
             loading="lazy"
+            unoptimized
           />
           <Image
             src="/twinkles.webp"
@@ -67,6 +69,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
             height={62}
             className="w-[3.9rem] h-[3.9rem] rotate-[180deg]"
             loading="lazy"
+            unoptimized
           />
         </span>
       </Comp>
