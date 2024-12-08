@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { FooterSvg } from "./footer-svg";
 import { InstagramLogo } from "./icons/instagram";
 import { LinkedinLogo } from "./icons/linkedin";
@@ -6,7 +7,7 @@ import { Button } from "./ui/button";
 
 export function Footer() {
   return (
-    <footer className="overflow-clip">
+    <footer className="relative overflow-clip">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-10  md:gap-16 lg:gap-28">
           <div>
@@ -23,6 +24,13 @@ export function Footer() {
       <div className="w-full mt-14">
         <FooterSvg />
       </div>
+      <Image
+        src={"/footer-overlay.webp"}
+        alt=""
+        fill
+        loading="lazy"
+        className="opacity-10 -z-[1] object-top object-cover"
+      />
     </footer>
   );
 }
