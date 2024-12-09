@@ -55,7 +55,7 @@ body::before {
     opacity: 0.03;
     z-index: -1;
 }
-.footer-end{
+.footer-end {
     background: radial-gradient(
         3093.38% 117.19% at 52.58% 7.83%,
         rgba(212, 199, 255, 0.2) 40%,
@@ -307,4 +307,13 @@ details[open]::details-content {
 .feature-card {
     border: 0.67px solid #f0f0f0;
     box-shadow: 0px -10.44px 17.15px -6.67px #e2e3f2 inset;
+}
+
+.footer {
+    background: radial-gradient(
+        3093.38% 117.19% at 52.58% 7.83%,
+        rgba(255, 255, 255, 0.2),
+        rgba(253, 254, 255, 0.2) 40%,
+        rgba(212, 199, 255, 0.2) 80.56%
+    );
 }

@@ -7,7 +7,7 @@ import { Button } from "./ui/button";
 
 export function Footer() {
   return (
-    <footer className="relative overflow-clip">
+    <footer className="footer relative overflow-clip">
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-3 gap-10  md:gap-16 lg:gap-28">
           <div>
