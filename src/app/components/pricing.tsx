@@ -17,13 +17,16 @@ export function Pricing() {
       <div className="relative z-0">
         <div className="flex justify-center items-center">
           <div className="container mx-auto px-4 max-w-[620px]">
-            <div className="text-center">
+            <div className="text-center" data-animation="fade-in-up">
               <Badge className="badge-border-gradient">
                 <StarsIcon />
                 <span className="text-gradient">Pricing</span>
               </Badge>
             </div>
-            <h2 className="text-3xl md:text-4xl   lg:text-5xl text-center font-medium mt-2 mb-4 lg:leading-[57.2px] tracking-tighter">
+            <h2
+              data-animation="fade-in-up"
+              className="text-3xl md:text-4xl   lg:text-5xl text-center font-medium mt-2 mb-4 lg:leading-[57.2px] tracking-tighter"
+            >
               Find the right plan
               <span className="align-middle px-4">
                 <SectionIcon>
@@ -32,7 +35,10 @@ export function Pricing() {
               </span>
               for your needs.
             </h2>
-            <p className="md:text-lg max-w-[480px] mx-auto  text-center">
+            <p
+              data-animation="fade-in-up"
+              className="md:text-lg max-w-[480px] mx-auto  text-center"
+            >
               Choose the plan that suits you best. No hidden fees and no
               surprises.
             </p>
@@ -58,217 +64,225 @@ export function Pricing() {
             </TabsList>
             <TabsContent value="yearly">
               <ul className="space-y-8 max-w-screen-md mx-auto pt-10 isolate">
-                <li
-                  className="pricing-card__container group rounded-2xl"
-                  data-state="in-active"
-                >
-                  <span className="text-center block p-3  text-sm tracking-tight font-medium">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      fill="none"
-                      viewBox="0 0 20 20"
-                      className="align-middle inline mr-2"
-                    >
-                      <path
-                        stroke="#036B26"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="1.619"
-                        d="M3.69 18.271v-4.153m0-8.305V1.661M1.612 3.737h4.153M1.613 16.195h4.153M10.749 2.49l-1.44 3.745c-.235.609-.352.913-.534 1.17q-.245.342-.587.586c-.256.182-.56.3-1.17.534l-3.744 1.44 3.745 1.44c.609.234.913.351 1.17.534.226.161.425.36.586.586.182.257.3.56.533 1.17l1.44 3.745 1.44-3.745c.235-.61.352-.913.534-1.17q.245-.342.587-.586c.256-.182.56-.3 1.17-.534l3.744-1.44-3.744-1.44c-.61-.234-.914-.352-1.17-.534a2.5 2.5 0 0 1-.587-.586c-.182-.257-.299-.561-.533-1.17z"
-                      ></path>
-                    </svg>
-                    <span>Start a 14 days free trial</span>
-                  </span>
-                  <PricingCard
-                    display={
-                      <div className="p-4 flex gap-6 items-center justify-between">
-                        <div className="">
+                <li data-animation="fade-in-up">
+                  <div
+                    className="pricing-card__container group rounded-2xl"
+                    data-state="in-active"
+                  >
+                    <span className="text-center block p-3  text-sm tracking-tight font-medium">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        fill="none"
+                        viewBox="0 0 20 20"
+                        className="align-middle inline mr-2"
+                      >
+                        <path
+                          stroke="#036B26"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="1.619"
+                          d="M3.69 18.271v-4.153m0-8.305V1.661M1.612 3.737h4.153M1.613 16.195h4.153M10.749 2.49l-1.44 3.745c-.235.609-.352.913-.534 1.17q-.245.342-.587.586c-.256.182-.56.3-1.17.534l-3.744 1.44 3.745 1.44c.609.234.913.351 1.17.534.226.161.425.36.586.586.182.257.3.56.533 1.17l1.44 3.745 1.44-3.745c.235-.61.352-.913.534-1.17q.245-.342.587-.586c.256-.182.56-.3 1.17-.534l3.744-1.44-3.744-1.44c-.61-.234-.914-.352-1.17-.534a2.5 2.5 0 0 1-.587-.586c-.182-.257-.299-.561-.533-1.17z"
+                        ></path>
+                      </svg>
+                      <span>Start a 14 days free trial</span>
+                    </span>
+                    <PricingCard
+                      display={
+                        <div className="p-4 flex gap-6 items-center justify-between">
+                          <div className="">
+                            <div className="tracking-tight">
+                              <span className="text-2xl font-semibold text-[#099137]">
+                                $3
+                              </span>{" "}
+                              <span className="text-sm text-soft-foreground">
+                                / month
+                              </span>
+                            </div>
+                            <span className="text-xs text-soft-foreground tracking-tight">
+                              Cancel anytime
+                            </span>
+                          </div>
+                          <div>
+                            <span className="text-xs text-soft-foreground tracking-tight">
+                              (Save 20% - $36)
+                            </span>
+                            <div className="flex gap-2 items-center mt-1">
+                              <span className="text-sm text-foreground font-medium tracking-tight">
+                                Pay yearly
+                              </span>
+                              <Switch
+                                className="h-4 w-7 data-[state=checked]:bg-[#375DFB]"
+                                classNameThumbs="h-3 w-3 data-[state=checked]:translate-x-3"
+                                checked
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      }
+                      canUpgrade
+                      price={{
+                        name: "Pro plan",
+                        benefits: [
+                          "Unlimited cross-post to other platforms",
+                          "Unlimited frames schedule ",
+                          "Unlimited reminders",
+                          "Unlimited streak pause ",
+                          "Job Alerts - 24 hrs earlier  ",
+                        ],
+                      }}
+                    />
+                  </div>
+                </li>
+                <li data-animation="fade-in-up">
+                  <div
+                    className="pricing-card__container group"
+                    data-state="active"
+                  >
+                    <span className="text-center block p-3 text-sm tracking-tight font-medium">
+                      You are on this plan
+                    </span>
+                    <PricingCard
+                      display={
+                        <div className="p-4">
                           <div className="tracking-tight">
-                            <span className="text-2xl font-semibold text-[#099137]">
-                              $3
+                            <span className="text-2xl font-semibold text-foreground">
+                              Free
                             </span>{" "}
                             <span className="text-sm text-soft-foreground">
-                              / month
+                              / forever
                             </span>
                           </div>
                           <span className="text-xs text-soft-foreground tracking-tight">
-                            Cancel anytime
+                            Limited access to designwhiz capabilities
                           </span>
                         </div>
-                        <div>
-                          <span className="text-xs text-soft-foreground tracking-tight">
-                            (Save 20% - $36)
-                          </span>
-                          <div className="flex gap-2 items-center mt-1">
-                            <span className="text-sm text-foreground font-medium tracking-tight">
-                              Pay yearly
-                            </span>
-                            <Switch
-                              className="h-4 w-7 data-[state=checked]:bg-[#375DFB]"
-                              classNameThumbs="h-3 w-3 data-[state=checked]:translate-x-3"
-                              checked
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    }
-                    canUpgrade
-                    price={{
-                      name: "Pro plan",
-                      benefits: [
-                        "Unlimited cross-post to other platforms",
-                        "Unlimited frames schedule ",
-                        "Unlimited reminders",
-                        "Unlimited streak pause ",
-                        "Job Alerts - 24 hrs earlier  ",
-                      ],
-                    }}
-                  />
-                </li>
-                <li
-                  className="pricing-card__container group"
-                  data-state="active"
-                >
-                  <span className="text-center block p-3 text-sm tracking-tight font-medium">
-                    You are on this plan
-                  </span>
-                  <PricingCard
-                    display={
-                      <div className="p-4">
-                        <div className="tracking-tight">
-                          <span className="text-2xl font-semibold text-foreground">
-                            Free
-                          </span>{" "}
-                          <span className="text-sm text-soft-foreground">
-                            / forever
-                          </span>
-                        </div>
-                        <span className="text-xs text-soft-foreground tracking-tight">
-                          Limited access to designwhiz capabilities
-                        </span>
-                      </div>
-                    }
-                    price={{
-                      name: "Starter",
-                      benefits: [
-                        "Cross-post to other platforms 3X per month",
-                        "Frames schedule once per month  ",
-                        "Reminders once per week",
-                        "Streak pause once per month",
-                        "Job Alerts - 24 hrs later ",
-                      ],
-                    }}
-                  />
+                      }
+                      price={{
+                        name: "Starter",
+                        benefits: [
+                          "Cross-post to other platforms 3X per month",
+                          "Frames schedule once per month  ",
+                          "Reminders once per week",
+                          "Streak pause once per month",
+                          "Job Alerts - 24 hrs later ",
+                        ],
+                      }}
+                    />
+                  </div>
                 </li>
               </ul>
             </TabsContent>
             <TabsContent value="monthly">
               <ul className="space-y-8 max-w-screen-md mx-auto pt-10 isolate">
-                <li
-                  className="pricing-card__container group rounded-2xl"
-                  data-state="in-active"
-                >
-                  <span className="text-center block p-3  text-sm tracking-tight font-medium">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      fill="none"
-                      viewBox="0 0 20 20"
-                      className="align-middle inline mr-2"
-                    >
-                      <path
-                        stroke="#036B26"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth="1.619"
-                        d="M3.69 18.271v-4.153m0-8.305V1.661M1.612 3.737h4.153M1.613 16.195h4.153M10.749 2.49l-1.44 3.745c-.235.609-.352.913-.534 1.17q-.245.342-.587.586c-.256.182-.56.3-1.17.534l-3.744 1.44 3.745 1.44c.609.234.913.351 1.17.534.226.161.425.36.586.586.182.257.3.56.533 1.17l1.44 3.745 1.44-3.745c.235-.61.352-.913.534-1.17q.245-.342.587-.586c.256-.182.56-.3 1.17-.534l3.744-1.44-3.744-1.44c-.61-.234-.914-.352-1.17-.534a2.5 2.5 0 0 1-.587-.586c-.182-.257-.299-.561-.533-1.17z"
-                      ></path>
-                    </svg>
-                    <span>Start a 14 days free trial</span>
-                  </span>
-                  <PricingCard
-                    display={
-                      <div className="p-4 flex gap-6 items-center justify-between">
-                        <div className="">
+                <li data-animation="fade-in-up">
+                  <div
+                    className="pricing-card__container group rounded-2xl"
+                    data-state="in-active"
+                  >
+                    <span className="text-center block p-3  text-sm tracking-tight font-medium">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        fill="none"
+                        viewBox="0 0 20 20"
+                        className="align-middle inline mr-2"
+                      >
+                        <path
+                          stroke="#036B26"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth="1.619"
+                          d="M3.69 18.271v-4.153m0-8.305V1.661M1.612 3.737h4.153M1.613 16.195h4.153M10.749 2.49l-1.44 3.745c-.235.609-.352.913-.534 1.17q-.245.342-.587.586c-.256.182-.56.3-1.17.534l-3.744 1.44 3.745 1.44c.609.234.913.351 1.17.534.226.161.425.36.586.586.182.257.3.56.533 1.17l1.44 3.745 1.44-3.745c.235-.61.352-.913.534-1.17q.245-.342.587-.586c.256-.182.56-.3 1.17-.534l3.744-1.44-3.744-1.44c-.61-.234-.914-.352-1.17-.534a2.5 2.5 0 0 1-.587-.586c-.182-.257-.299-.561-.533-1.17z"
+                        ></path>
+                      </svg>
+                      <span>Start a 14 days free trial</span>
+                    </span>
+                    <PricingCard
+                      display={
+                        <div className="p-4 flex gap-6 items-center justify-between">
+                          <div className="">
+                            <div className="tracking-tight">
+                              <span className="text-2xl font-semibold text-[#099137]">
+                                $3
+                              </span>{" "}
+                              <span className="text-sm text-soft-foreground">
+                                / month
+                              </span>
+                            </div>
+                            <span className="text-xs text-soft-foreground tracking-tight">
+                              Cancel anytime
+                            </span>
+                          </div>
+                          <div>
+                            <span className="text-xs text-soft-foreground tracking-tight">
+                              (Save 20% - $36)
+                            </span>
+                            <div className="flex gap-2 items-center mt-1">
+                              <span className="text-sm text-foreground font-medium tracking-tight">
+                                Pay yearly
+                              </span>
+                              <Switch
+                                className="h-4 w-7 data-[state=checked]:bg-[#375DFB]"
+                                classNameThumbs="h-3 w-3 data-[state=checked]:translate-x-3"
+                                checked
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      }
+                      canUpgrade
+                      price={{
+                        name: "Pro plan",
+                        benefits: [
+                          "Unlimited cross-post to other platforms",
+                          "Unlimited frames schedule ",
+                          "Unlimited reminders",
+                          "Unlimited streak pause ",
+                          "Job Alerts - 24 hrs earlier  ",
+                        ],
+                      }}
+                    />
+                  </div>
+                </li>
+                <li data-animation="fade-in-up">
+                  <div
+                    className="pricing-card__container group"
+                    data-state="active"
+                  >
+                    <span className="text-center block p-3 text-sm tracking-tight font-medium">
+                      You are on this plan
+                    </span>
+                    <PricingCard
+                      display={
+                        <div className="p-4">
                           <div className="tracking-tight">
-                            <span className="text-2xl font-semibold text-[#099137]">
-                              $3
+                            <span className="text-2xl font-semibold text-foreground">
+                              Free
                             </span>{" "}
                             <span className="text-sm text-soft-foreground">
-                              / month
+                              / forever
                             </span>
                           </div>
                           <span className="text-xs text-soft-foreground tracking-tight">
-                            Cancel anytime
+                            Limited access to designwhiz capabilities
                           </span>
                         </div>
-                        <div>
-                          <span className="text-xs text-soft-foreground tracking-tight">
-                            (Save 20% - $36)
-                          </span>
-                          <div className="flex gap-2 items-center mt-1">
-                            <span className="text-sm text-foreground font-medium tracking-tight">
-                              Pay yearly
-                            </span>
-                            <Switch
-                              className="h-4 w-7 data-[state=checked]:bg-[#375DFB]"
-                              classNameThumbs="h-3 w-3 data-[state=checked]:translate-x-3"
-                              checked
-                            />
-                          </div>
-                        </div>
-                      </div>
-                    }
-                    canUpgrade
-                    price={{
-                      name: "Pro plan",
-                      benefits: [
-                        "Unlimited cross-post to other platforms",
-                        "Unlimited frames schedule ",
-                        "Unlimited reminders",
-                        "Unlimited streak pause ",
-                        "Job Alerts - 24 hrs earlier  ",
-                      ],
-                    }}
-                  />
-                </li>
-                <li
-                  className="pricing-card__container group"
-                  data-state="active"
-                >
-                  <span className="text-center block p-3 text-sm tracking-tight font-medium">
-                    You are on this plan
-                  </span>
-                  <PricingCard
-                    display={
-                      <div className="p-4">
-                        <div className="tracking-tight">
-                          <span className="text-2xl font-semibold text-foreground">
-                            Free
-                          </span>{" "}
-                          <span className="text-sm text-soft-foreground">
-                            / forever
-                          </span>
-                        </div>
-                        <span className="text-xs text-soft-foreground tracking-tight">
-                          Limited access to designwhiz capabilities
-                        </span>
-                      </div>
-                    }
-                    price={{
-                      name: "Starter",
-                      benefits: [
-                        "Cross-post to other platforms 3X per month",
-                        "Frames schedule once per month  ",
-                        "Reminders once per week",
-                        "Streak pause once per month",
-                        "Job Alerts - 24 hrs later ",
-                      ],
-                    }}
-                  />
+                      }
+                      price={{
+                        name: "Starter",
+                        benefits: [
+                          "Cross-post to other platforms 3X per month",
+                          "Frames schedule once per month  ",
+                          "Reminders once per week",
+                          "Streak pause once per month",
+                          "Job Alerts - 24 hrs later ",
+                        ],
+                      }}
+                    />
+                  </div>
                 </li>
               </ul>
             </TabsContent>

@@ -88,6 +88,7 @@ export function TestimonialCarousel() {
         align: "start",
       }}
       className="w-full"
+      data-animation="fade-in"
     >
       <CarouselContent>
         {testimonials.map((t, index) => (
@@ -95,7 +96,9 @@ export function TestimonialCarousel() {
             key={index}
             className="lg:flex-[0_0_calc(100%/4)] even:pt-7"
           >
-            <TestimonialCard testimonial={t} />
+            <span>
+              <TestimonialCard testimonial={t} />
+            </span>
           </CarouselItem>
         ))}
       </CarouselContent>

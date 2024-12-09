@@ -1,7 +1,7 @@
-import Image from "next/image";
 import { Footer } from "~/components/footer";
 import { DsgnWhizIcon } from "~/components/icons/dsgnwhiz";
 import { Button } from "~/components/ui/button";
+import { Arc } from "./components/arc";
 import { Benefits } from "./components/benefits";
 import { FAQs } from "./components/faqs";
 import { Features } from "./components/features";
@@ -22,11 +22,7 @@ export default function Home() {
       <main>
         <Hero />
         <div className="-mt-[500px] md:-mt-[550px] lg:-mt-[650px] py-10">
-          <div className="absolute">
-            <div className="relative text-center clipped w-[100vw] h-[100svh]">
-              <Image src={"/bg-arc.webp"} alt="" fill loading="lazy" />
-            </div>
-          </div>
+          <Arc />
           <SocialProof />
           <div className="bg-background">
             <Benefits />
@@ -45,7 +41,7 @@ export default function Home() {
           <FAQs />
         </div>
       </main>
-      <div className="pt-20">
+      <div className="pt-20" data-animation="fadse-in">
         <Footer />
       </div>
       <FooterEnd />

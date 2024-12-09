@@ -39,13 +39,16 @@ export function FAQs() {
       <div className="relative z-0">
         <div className="flex justify-center items-center">
           <div className="container mx-auto px-4 max-w-[620px]">
-            <div className="text-center">
+            <div className="text-center" data-animation="fade-in-up">
               <Badge className="badge-border-gradient">
                 <StarsIcon />
                 <span className="text-gradient">FAQs</span>
               </Badge>
             </div>
-            <h2 className="text-3xl md:text-4xl   lg:text-5xl text-center font-medium mt-2 mb-4 lg:leading-[57.2px] tracking-tighter">
+            <h2
+              data-animation="fade-in-up"
+              className="text-3xl md:text-4xl   lg:text-5xl text-center font-medium mt-2 mb-4 lg:leading-[57.2px] tracking-tighter"
+            >
               We have
               <span className="align-middle px-4">
                 <SectionIcon>
@@ -54,7 +57,10 @@ export function FAQs() {
               </span>
               answers to your questions.
             </h2>
-            <p className="md:text-lg max-w-[480px] mx-auto  text-center">
+            <p
+              data-animation="fade-in-up"
+              className="md:text-lg max-w-[480px] mx-auto  text-center"
+            >
               Clear, insightful, and helpful responses to ensure you get the
               information you need.
             </p>
@@ -65,7 +71,7 @@ export function FAQs() {
         <ul className="space-y-4 max-w-screen-md mx-auto">
           {faqs.map((qa, idx) => {
             return (
-              <li key={idx} className="faq-item">
+              <li key={idx} className="faq-item" data-animation="fade-in-up">
                 <details
                   className="bg-background rounded-xl overflow-hidden group"
                   key={idx}
@@ -92,7 +98,10 @@ export function FAQs() {
             );
           })}
         </ul>
-        <div className="text-center text-sm tracking-tighter mt-10">
+        <div
+          data-animation="fade-in-up"
+          className="text-center text-sm tracking-tighter mt-10"
+        >
           Have more questions?{" "}
           <a href="#" className="text-[#7421FC]">
             Get Help

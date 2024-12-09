@@ -317,3 +317,21 @@ details[open]::details-content {
         rgba(212, 199, 255, 0.2) 80.56%
     );
 }
+
+.bg-arc {
+    background: linear-gradient(
+        0.04deg,
+        #ffffff -0.32%,
+        #ffffff 39.27%,
+        #ffffff 78.86%
+    );
+
+    border-radius: 9999px 9999px 0 0;
+    /* width: 150vw; */
+    /* margin-left: auto;
+    margin-right: auto; */
+
+    box-shadow:
+        0px 0px 4.68px 0px #222a3514,
+        0px 4px 12px 0px #e2e3f280 inset;
+}

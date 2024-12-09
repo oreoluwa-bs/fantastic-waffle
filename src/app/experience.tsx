@@ -1,9 +1,14 @@
 "use client";
 
+import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import "lenis/dist/lenis.css";
 import { ReactLenis } from "lenis/react";
 import { ComponentRef, useEffect, useRef } from "react";
+import { GlobalAnimations } from "./animations/global";
+
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export function Experience({ children }: { children: React.ReactNode }) {
   const lenisRef = useRef<ComponentRef<typeof ReactLenis>>(null);
@@ -29,10 +34,10 @@ export function Experience({ children }: { children: React.ReactNode }) {
         autoRaf: false,
         infinite: true,
         syncTouch: true,
-
       }}
     >
       {children}
+      <GlobalAnimations />
     </ReactLenis>
   );
 }

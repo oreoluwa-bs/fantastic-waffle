@@ -4,7 +4,10 @@ export function LogoCloud() {
   return (
     <div className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <h2 className="text-center text-sm/6 font-medium  text-soft-foreground">
+        <h2
+          data-animation="fade-in-up"
+          className="text-center text-sm/6 font-medium  text-soft-foreground"
+        >
           Top Designers from companies like
         </h2>
         <div className="mx-auto mt-10 flex max-w-lg flex-wrap items-center justify-center gap-x-8 gap-y-10 sm:max-w-xl sm: sm:gap-x-14 lg:max-w-[960px]">
@@ -15,6 +18,7 @@ export function LogoCloud() {
             height={32}
             loading="lazy"
             className="object-contain"
+            data-animation="fade-in-up"
           />
           <Image
             alt="Figma"
@@ -23,6 +27,7 @@ export function LogoCloud() {
             height={32}
             loading="lazy"
             className="object-contain"
+            data-animation="fade-in-up"
           />
           <Image
             alt="Meta"
@@ -31,6 +36,7 @@ export function LogoCloud() {
             height={32}
             loading="lazy"
             className="object-contain"
+            data-animation="fade-in-up"
           />
           <Image
             alt="Piggyvest"
@@ -39,6 +45,7 @@ export function LogoCloud() {
             height={32}
             loading="lazy"
             className="object-contain"
+            data-animation="fade-in-up"
           />
           <Image
             alt="Lateral Frontiers"
@@ -55,6 +62,7 @@ export function LogoCloud() {
             height={32}
             loading="lazy"
             className="object-contain"
+            data-animation="fade-in-up"
           />
           <Image
             alt="Shuttlers"
@@ -63,6 +71,7 @@ export function LogoCloud() {
             height={32}
             loading="lazy"
             className="object-contain"
+            data-animation="fade-in-up"
           />
           <Image
             alt="Pastel"
@@ -71,6 +80,7 @@ export function LogoCloud() {
             height={32}
             loading="lazy"
             className="object-contain"
+            data-animation="fade-in-up"
           />
           <Image
             alt="Multigate"
@@ -79,6 +89,7 @@ export function LogoCloud() {
             height={32}
             loading="lazy"
             className="object-contain"
+            data-animation="fade-in-up"
           />
           <Image
             alt="Lemfi"
@@ -87,6 +98,7 @@ export function LogoCloud() {
             height={20}
             loading="lazy"
             className="object-contain"
+            data-animation="fade-in-up"
           />
 
           <Image
@@ -96,6 +108,7 @@ export function LogoCloud() {
             height={32}
             loading="lazy"
             className="object-contain"
+            data-animation="fade-in-up"
           />
         </div>
       </div>

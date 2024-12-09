@@ -21,23 +21,32 @@ export function Hero() {
       <div className="hero-overlay -mt-24 md:-mt-44 pt-24 h-[1158px]">
         <div className="flex justify-center items-center">
           <div className="container mx-auto px-4 max-w-[826px]">
-            <div className="text-center relative z-10">
+            <div
+              className="text-center relative z-10"
+              data-animation="fade-in-up"
+            >
               <Badge className="badge-border-gradient">
                 <StarsIcon />
                 <span className="text-gradient">DsgnWhiz Pro</span>
               </Badge>
             </div>
 
-            <h1 className="text-4xl md:text-5xl lg:text-[56px] text-center font-medium mt-2 mb-4 lg:leading-[67.2px] tracking-tighter">
+            <h1
+              data-animation="fade-in-up"
+              className="text-4xl md:text-5xl lg:text-[56px] text-center font-medium mt-2 mb-4 lg:leading-[67.2px] tracking-tighter"
+            >
               Experience DesignWhiz on a whole different level 🚀
             </h1>
-            <p className=" md:text-lg text-center text-balance">
+            <p
+              data-animation="fade-in-up"
+              className=" md:text-lg text-center text-balance"
+            >
               Subscribe to DesignWhiz pro to unlock exclusive access to design
               resources and enjoy unlimited premium features that boost your
               creative process.
             </p>
             <div className="flex flex-col sm:flex-row gap-10 items-center justify-center mt-10">
-              <div className="text-sub-foreground">
+              <div data-animation="fade-in-up" className="text-sub-foreground">
                 Brought to you by:
                 <div className="flex gap-2 items-center">
                   <span>the creators of </span>
@@ -46,7 +55,7 @@ export function Hero() {
                   </span>
                 </div>
               </div>
-              <Button className="w-[164px]">
+              <Button className="w-[164px]" data-animation="fade-in-up">
                 <RocketIcon />
                 Sign me up
               </Button>

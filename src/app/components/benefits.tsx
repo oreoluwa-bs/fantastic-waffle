@@ -137,16 +137,22 @@ export function Benefits() {
       <div className="relative z-0">
         <div className="flex justify-center items-center">
           <div className="container mx-auto px-4 max-w-[620px]">
-            <div className="text-center">
+            <div className="text-center" data-animation="fade-in-up">
               <Badge className="badge-border-gradient">
                 <StarsIcon />
                 <span className="text-gradient">Benefits</span>
               </Badge>
             </div>
-            <h2 className="text-3xl md:text-4xl   lg:text-5xl text-center font-medium mt-2 mb-4 lg:leading-[57.2px] tracking-tighter">
+            <h2
+              data-animation="fade-in-up"
+              className="text-3xl md:text-4xl   lg:text-5xl text-center font-medium mt-2 mb-4 lg:leading-[57.2px] tracking-tighter"
+            >
               Its even better with DesignWhiz Pro
             </h2>
-            <p className="md:text-lg max-w-[480px] mx-auto  text-center">
+            <p
+              data-animation="fade-in-up"
+              className="md:text-lg max-w-[480px] mx-auto  text-center"
+            >
               The opportunity to get more eyes on your work and stand out with
               attention grabbing profile features to attract more opportunities.
             </p>
@@ -157,14 +163,21 @@ export function Benefits() {
         <ul className="flex flex-wrap gap-6 mb-8">
           {benefits.map((b, i) => {
             return (
-              <li key={i} className={cn("", b.meta.className)}>
+              <li
+                key={i}
+                className={cn("", b.meta.className)}
+                data-animation="fade-in-up"
+              >
                 <BenefitCard benefit={b} />
               </li>
             );
           })}
         </ul>
       </div>
-      <div className="flex items-center justify-center pb-20">
+      <div
+        className="flex items-center justify-center pb-20"
+        data-animation="fade-in-up"
+      >
         <Button className="w-[164px]">
           <RocketIcon />
           Subscribe now
@@ -180,10 +193,16 @@ function BenefitCard({ benefit }: { benefit: (typeof benefits)[0] }) {
       <div className="bg-gray-50/5 min-h-56">{benefit.image}</div>
       {/* <div className="flex-1" /> */}
       <div className="benefit-card-text-container px-9 py-9">
-        <h3 className="text-[#0E0523]  tracking-tight text-xl mb-6">
+        <h3
+          className="text-[#0E0523]  tracking-tight text-xl mb-6"
+          data-animation="fade-in-up"
+        >
           {benefit.title}
         </h3>
-        <p className="text-[#33274B] tracking-[-0.01em] leading-5">
+        <p
+          className="text-[#33274B] tracking-[-0.01em] leading-5"
+          data-animation="fade-in-up"
+        >
           {benefit.description}
         </p>
       </div>
