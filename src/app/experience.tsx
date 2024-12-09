@@ -32,6 +32,11 @@ export function Experience({ children }: { children: React.ReactNode }) {
       }
     }
 
+    if (mm.matches && lenisRef.current?.lenis) {
+      lenisRef.current.lenis.options.infinite = true;
+      lenisRef.current.lenis.options.syncTouch = true;
+    }
+
     mm.addEventListener("change", handleResize);
 
     return () => {
