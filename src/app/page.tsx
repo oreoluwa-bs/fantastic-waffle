@@ -44,7 +44,9 @@ export default function Home() {
       <div className="pt-20" data-animation="fadse-in">
         <Footer />
       </div>
-      <FooterEnd />
+      <div className="hidden md:block">
+        <FooterEnd />
+      </div>
     </Experience>
   );
 }

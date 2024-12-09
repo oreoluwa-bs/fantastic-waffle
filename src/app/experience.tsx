@@ -23,6 +23,17 @@ export function Experience({ children }: { children: React.ReactNode }) {
     return () => gsap.ticker.remove(update);
   }, []);
 
+  useEffect(() => {
+    const mm = gsap.matchMedia();
+
+    mm.add("(min-width: 768px)", () => {
+      if (lenisRef.current?.lenis) {
+        lenisRef.current.lenis.options.infinite = true;
+        lenisRef.current.lenis.options.syncTouch = true;
+      }
+    });
+  }, []);
+
   return (
     <ReactLenis
       root
@@ -32,8 +43,6 @@ export function Experience({ children }: { children: React.ReactNode }) {
         duration: 1,
         smoothWheel: true,
         autoRaf: false,
-        infinite: true,
-        syncTouch: true,
       }}
     >
       {children}
