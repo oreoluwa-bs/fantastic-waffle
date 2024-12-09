@@ -44,7 +44,7 @@ export function Experience({ children }: { children: React.ReactNode }) {
       lenisRef.current.lenis.options.syncTouch = true;
     }
 
-    console.log(lenisRef.current, mm.matches);
+    // console.log(lenisRef.current, mm.matches);
 
     mm.addEventListener("change", handleResize);
 
